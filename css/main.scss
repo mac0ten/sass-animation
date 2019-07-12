@@ -1,0 +1,53 @@
+$colors:(
+    primary:dodgerblue,
+    secondary:darken(dodgerblue,20%)
+);
+
+@function color($color){
+    @return map-get($colors, $color)
+}
+
+body,html{
+    padding:0;
+    margin:0;
+    position: relative;
+    height:100%;
+    .card{
+        width:350px;
+        height:140px;
+        background:color(primary);
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        clip-path: circle(30px at 100% 0px);
+        transition: all 1s ease-in-out;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+        span{
+            right:10px;
+            top:5px;
+            position: absolute;
+            color:white;
+            font-weight: bold;
+            transform: display 1s ease-in-out;
+        }
+        
+        &:hover{
+            clip-path: circle(75%);
+            background: color(secondary);
+            span{
+                display: none;
+            }
+        }
+        h1{
+            color:white;
+            font-family: sans-serif;
+        }
+        p{
+            color:white;
+        }
+    }
+
+}

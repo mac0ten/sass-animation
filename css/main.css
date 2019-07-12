@@ -1,0 +1,54 @@
+body, html {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 100%;
+}
+
+body .card, html .card {
+  width: 350px;
+  height: 140px;
+  background: dodgerblue;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  -webkit-clip-path: circle(30px at 100% 0px);
+          clip-path: circle(30px at 100% 0px);
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body .card span, html .card span {
+  right: 10px;
+  top: 5px;
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  -webkit-transform: display 1s ease-in-out;
+          transform: display 1s ease-in-out;
+}
+
+body .card:hover, html .card:hover {
+  -webkit-clip-path: circle(75%);
+          clip-path: circle(75%);
+  background: #005db7;
+}
+
+body .card:hover span, html .card:hover span {
+  display: none;
+}
+
+body .card h1, html .card h1 {
+  color: white;
+  font-family: sans-serif;
+}
+
+body .card p, html .card p {
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */
