@@ -21,7 +21,7 @@ body,html{
         transform: translate(-50%,-50%);
         position: absolute;
         clip-path: circle(30px at 100% 0px);
-        transition: all 1s ease-in-out;
+        transition: clip-path 1s ease-in-out;
         text-align: center;
         border-radius: 5px;
         cursor: pointer;
@@ -36,7 +36,6 @@ body,html{
         
         &:hover{
             clip-path: circle(75%);
-            background: color(secondary);
             span{
                 display: none;
             }
